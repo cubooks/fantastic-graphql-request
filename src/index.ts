@@ -1,6 +1,6 @@
 interface Params {
-  action: number;
-  responseFields: string[];
+  action: string;
+  responseFields: any[];
   variables?: { name: string; type: string }[];
   data?: Record<string, any>;
 };
@@ -30,8 +30,10 @@ class SchemaFetchRequest {
    * @param params 
    * @param customOptions 
    */
-  constructor(context: Context) {
-    this.context = context;
+  constructor(context: Context | false = false) {
+    if (context) {
+      this.context = context;
+    }
   }
 
   /**
@@ -51,7 +53,7 @@ class SchemaFetchRequest {
 
   generateRequest = (
     params: Params,
-    customOptions: Record<string, any>,
+    customOptions: Record<string, any> = {},
   ): Record<string, any> => {
     const { type } = this.context;
     const {

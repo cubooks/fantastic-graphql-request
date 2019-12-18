@@ -17,19 +17,29 @@
     "tools"
   ],
   "scripts": {
+    "test": "jest",
     "check-types": "tsc --noEmit",
-    "build": "rollup -c",
+    "build": "yarn test && yarn check-types --skipLibCheck  && rollup -c",
     "dev": "rollup -c -w"
   },
   "files": [
     "dist"
   ],
   "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-typescript": "^7.7.4",
+    "@types/jest": "^24.0.23",
     "@typescript-eslint/eslint-plugin": "^2.12.0",
     "@typescript-eslint/parser": "^2.12.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.9.0",
     "eslint": "^6.7.2",
     "eslint-loader": "^3.0.3",
     "eslint-plugin-import": "2.18.2",
+    "jest": "^24.9.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-generate-html-template": "^1.6.0",
     "rollup-plugin-livereload": "^1.0.4",

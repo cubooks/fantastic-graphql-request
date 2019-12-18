@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generate custom type schema 1`] = `
+Object {
+  "body": "{\\"query\\":\\"mutation Mutation($data: UserAttributesType){registerUser(data: $data){id}}\\",\\"variables\\":{\\"data\\":[]}}",
+  "credentials": "include",
+  "headers": Object {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+  },
+  "method": "post",
+}
+`;
+
+exports[`generate default type schema 1`] = `
+Object {
+  "body": "{\\"query\\":\\"query Query{getUserInfo{id,email}}\\",\\"variables\\":{}}",
+  "credentials": "include",
+  "headers": Object {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+  },
+  "method": "post",
+}
+`;
+
+exports[`generate three response fields schema 1`] = `
+Object {
+  "body": "{\\"query\\":\\"mutation Mutation($data: UserProfileAttributesType){updateUserProfile(data: $data){profileWrited,profile{firstName,lastName,nickName,gender,photoId,wins,losses,draws,weight,city,tapologyLink,sherdogLink}}}\\",\\"variables\\":{\\"data\\":[]}}",
+  "credentials": "include",
+  "headers": Object {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+  },
+  "method": "post",
+}
+`;
