@@ -30,7 +30,6 @@ const getUserReq = const schema.generateRequest({
 //  "method": "post",
 // }
 
-
 // note: you can use any fetch
 fetch('/graphql', getUserReq);
 

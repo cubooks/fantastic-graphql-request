@@ -66,6 +66,11 @@
                 })
                     .join(',');
             };
+            /**
+             * Generate request schema
+             * @param params
+             * @param customOptions
+             */
             this.generateRequest = function (params, customOptions) {
                 if (customOptions === void 0) { customOptions = {}; }
                 var type = _this.context.type;

@@ -51,6 +51,11 @@ class SchemaFetchRequest {
       })
       .join(',');
 
+  /**
+   * Generate request schema
+   * @param params
+   * @param customOptions
+   */
   generateRequest = (
     params: Params,
     customOptions: Record<string, any> = {},
