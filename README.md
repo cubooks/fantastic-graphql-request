@@ -85,6 +85,6 @@ fetch('/graphql', updateUserProfileReq);
 
 ```
 
-## Paramets
+## Parameters
 
 todo...
